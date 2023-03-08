@@ -1,4 +1,4 @@
-theme = 'ananke~'
+theme = 'ananke'
 baseURL = 'https://beaudrychase.github.io'
 languageCode = 'en-us'
 title = 'Beaudry Chase'
