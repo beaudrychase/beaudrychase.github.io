@@ -3,9 +3,6 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Website of Beaudry Chase"
 
-# theme as git submodule
-theme = "anubis"
-
 summarylength = 10
 enableEmoji = true
 enableRobotsTXT = true
