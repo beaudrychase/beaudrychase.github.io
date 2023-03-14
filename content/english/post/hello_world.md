@@ -6,7 +6,6 @@ Tags: []
 Categories: []
 DisableComments: false
 ---
-# Hello World
 
 This is the first post on this site. It is hosted on [GitHub pages](https://pages.github.com/). The content is statically generated using [Hugo](https://gohugo.io/). This is my first project using Hugo, GitHub Pages, and GitHub actions.
 
