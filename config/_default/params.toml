@@ -4,7 +4,7 @@ author = "Beaudry Chase"
 description = "Beaudry Chase"
 profilePicture = "images/profile.jpg"
 keywords = ""
-favicon = "favicons/"
+favicon = "favicon/"
 # example ["css/custom.css"]
 customCss = []
 # example ["js/custom.js"]
