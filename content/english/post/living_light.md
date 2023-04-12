@@ -5,7 +5,7 @@ Description: "This is my first post about my ongoing personal project living_lig
 Tags: []
 Categories: []
 DisableComments: false
-draft: true
+draft: false
 thumbnail: "/images/living_light_front.jpeg"
 ---
 
