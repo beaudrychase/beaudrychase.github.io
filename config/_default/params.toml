@@ -66,4 +66,4 @@ title = "GitHub"
 url = "https://github.com/beaudrychase"
 
 [mermaid]
-# enable = true
+enable = true
