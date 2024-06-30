@@ -1,50 +1,44 @@
 baseURL = "https://beaudrychase.github.io"
+title = "Dev Log by Beaudry Chase"
+author = "Beaudry Chase"
+copyright = "Beaudry Chase"
+paginate = 10
 languageCode = "en"
-DefaultContentLanguage = "en"
-title = "Website by Beaudry Chase"
+theme = "tailwind"
 
-summarylength = 10
-enableEmoji = true
-enableRobotsTXT = true
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "post"
 
-# Enable Disqus
-#disqusShortname = ""
+  [params.header]
+    logo = "images/profile.jpg"
 
-# Google Analytics
-# googleAnalytics = "UA-123-45"
+  [params.footer]
+    since = 2022
+    poweredby = false
 
-# Syntax highlighting
-pygmentsUseClasses = true   
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
+[menu]
 
-# Localized dates requires Hugo version 0.87.0
-localizedDates = false
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
 
-[markup]
-    [markup.goldmark]
-        [markup.goldmark.renderer]
-        unsafe=true
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
 
 [taxonomies]
-    category = "categories"
-    series = "series"
-    tag = "tags"
+category = "categories"
+tag = "tags"
+series = "series"
 
-[related]
-  includeNewer = true
-  threshold = 80
-  toLower = true
-[[related.indices]]
-  name = 'keywords'
-  weight = 100
-[[related.indices]]
-  name = 'tags'
-  weight = 80
-
-[module]
-  # uncomment line below for temporary local development of module
-  # replacements = "github.com/beaudrychase/anatole -> ../../anatole"
-  [[module.imports]]
-    path = "github.com/beaudrychase/anatole"
-    disable = false
+[[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/beaudrychase'

@@ -3,7 +3,7 @@ title: "Hello world"
 date: 2023-03-13T17:17:45-05:00
 Description: "First Post on This Blog"
 Tags: []
-Categories: []
+Categories: ["blog"]
 DisableComments: false
 ---
 

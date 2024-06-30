@@ -1,14 +1,14 @@
   [[main]]
-  name = "Home"
-  identifier = "home"
-  weight = 100
-  url = "/"
-
-  [[main]]
   name = "Posts"
   weight = 200
   identifier = "posts"
   url = "/post/"
+
+  [[main]]
+  name = "About"
+  weight = 400
+  identifier = "about"
+  url = "/about/"
 
   # [[main]]
   # name = "Portfolio"
@@ -16,11 +16,7 @@
   # identifier = "portfolio"
   # url = "/portfolio/"
 
-  # [[main]]
-  # name = "About"
-  # weight = 400
-  # identifier = "about"
-  # url = "/about/"
+
 
   # [[main]]
   # name = "Accomplishments"
@@ -40,18 +36,3 @@
   # identifier = "certifications"
   # url = "/certifications/"
   # parent = "accomplishments"
-
-  # [[main]]
-  # name = "Contact"
-  # weight = 600
-  # identifier = "contact"
-  # url = "/contact/"
-
-  [[footer]]
-    name = "Powered by Hugo"
-    url = "http://gohugo.io"
-    weight = 100
-  [[footer]]
-    name = "Forked from a theme made by Alexander Bilz"
-    url = "https://github.com/lxndrblz"
-    weight = 110
