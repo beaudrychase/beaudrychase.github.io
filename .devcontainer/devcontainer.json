@@ -39,5 +39,9 @@
         }
     },
     "remoteUser": "vscode",
-    "postCreateCommand": "pnpm --version"
+    "postCreateCommand": "pnpm --version",
+    "features": {
+        "git": "os-provided",
+        "sshd": "latest"
+    },
 }
