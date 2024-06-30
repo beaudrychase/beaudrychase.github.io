@@ -12,7 +12,7 @@ theme = "tailwind"
   contentTypeName = "post"
 
   [params.header]
-    logo = "images/profile.jpg"
+    logo = "svg/logo.svg"
 
   [params.footer]
     since = 2022
