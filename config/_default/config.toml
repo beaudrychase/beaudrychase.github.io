@@ -9,14 +9,14 @@ theme = "tailwind"
 [params]
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "posts"
+  contentTypeName = "post"
 
   [params.header]
-    logo = "logo.webp"
+    logo = "images/profile.jpg"
 
   [params.footer]
-    since = 2023
-    poweredby = true
+    since = 2022
+    poweredby = false
 
 [menu]
 
@@ -36,3 +36,9 @@ theme = "tailwind"
 category = "categories"
 tag = "tags"
 series = "series"
+
+[[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/beaudrychase'
