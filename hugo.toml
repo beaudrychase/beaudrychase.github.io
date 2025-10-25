@@ -1,0 +1,71 @@
+baseURL = "https://beaudrychase.github.io"
+title = "Dev Log by Beaudry Chase"
+author = "Beaudry Chase"
+copyright = "Beaudry Chase"
+languageCode = "en-us"
+buildFuture = true
+buildDrafts = false
+pagination.pagerSize = 12
+
+DefaultContentLanguage = 'en'
+defaultContentLanguage = 'en'
+pluralizelisttitles = 'false'
+
+refLinksErrorLevel = 'WARNING'
+refLinksNotFoundURL = '/'
+
+timeout = 60000
+
+rssLimit = 3
+
+enableInlineShortcodes = true
+
+[permalinks]
+  posts = '/:year/:month/:slugorfilename/'
+  categories = '/:slug/'
+
+[params]
+  author = 'Beaudry Chase'
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "post"
+
+  [params.header]
+    logo = "svg/logo.svg"
+
+  [params.footer]
+    since = 2022
+    poweredby = false
+  description = "Beaudry Chase's corner of the internet"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+[taxonomies]
+  author = 'authors'
+  tag = 'tags'
+  category = 'categories'
+  translator = 'translators'
+  lang = 'languages'
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  [[related.indices]]
+    name = 'lang'
+    weight = 80
