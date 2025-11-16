@@ -20,37 +20,48 @@ rssLimit = 3
 
 enableInlineShortcodes = true
 
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser.attribute]
+    block = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'onesenterprise'
+    tabWidth = 4
+
 [permalinks]
-  posts = '/:year/:month/:slugorfilename/'
+  posts = '/:year/:month/:slugorcontentbasename/'
   categories = '/:slug/'
 
 [params]
   author = 'Beaudry Chase'
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "post"
 
-  [params.header]
-    logo = "svg/logo.svg"
 
-  [params.footer]
-    since = 2022
-    poweredby = false
-  description = "Beaudry Chase's corner of the internet"
 
 [menu]
-
   [[menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "/posts"
-    weight = 0
-
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 1
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    pageRef = "/about"
-    weight = 10
+    identifier = 'blog'
+    name = 'blog'
+    url = '/blog/'
+    weight = 2
 
 [taxonomies]
   author = 'authors'
@@ -58,6 +69,10 @@ enableInlineShortcodes = true
   category = 'categories'
   translator = 'translators'
   lang = 'languages'
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
 
 [related]
   includeNewer = true

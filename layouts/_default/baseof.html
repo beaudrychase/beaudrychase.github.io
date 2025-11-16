@@ -19,11 +19,10 @@
 
 </head>
 <body id="{{ .Title | urlize }}">
-	{{ partial "battery" . }}
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
 
-	<script src="{{ .Site.BaseURL }}js/script.js"></script>
+	<!-- <script src="{{ .Site.BaseURL }}js/script.js"></script> -->
 </body>
 </html>

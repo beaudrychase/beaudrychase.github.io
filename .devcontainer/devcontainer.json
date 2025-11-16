@@ -7,8 +7,20 @@
 		"ghcr.io/devcontainers/features/hugo:1": {
 			"extended": true
 		},
-		"git": "os-provided"
+		"git": "os-provided",
+		"ghcr.io/devcontainers/features/python:1": {}
 	},
-	"postStartCommand": "hugo server"
-
+	"postStartCommand": "hugo server",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"prettier.proseWrap": "always"
+			},
+			"extensions": [
+				"yzhang.markdown-all-in-one",
+				"esbenp.prettier-vscode"
+			]
+		}
+	}
 }
