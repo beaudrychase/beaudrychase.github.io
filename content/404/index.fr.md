@@ -2,7 +2,7 @@
 title: "Erreur 404"
 summary: "La page que vous recherchez est introuvable"
 noindex: true
-lang: fr
+language: fr
 url: "404"
 categories: [""]
 ---

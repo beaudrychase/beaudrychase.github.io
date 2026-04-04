@@ -2,7 +2,7 @@
 title: "Nicht gefunden"
 summary: "Diese Seite konnte nicht gefunden werden"
 noindex: true
-lang: de
+language: de
 url: "404"
 categories: [""]
 ---

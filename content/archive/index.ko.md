@@ -1,7 +1,7 @@
 ---
 title: Archive
 slug: archives
-lang: ko
+language: ko
 summary: archive intro
 layout: archive
 ---

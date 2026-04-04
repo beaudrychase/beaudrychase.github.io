@@ -6,7 +6,7 @@ summary:
   We collect server logs to understand traffic on the server. This information
   is viewed only by me and is not used to make user profiles."
 slug: "privacy"
-lang: "en"
+language: "en"
 categories: [""]
 tags: []
 ---

@@ -1,7 +1,7 @@
 ---
 title: Mitwirkende
 slug: contributors
-lang: de
+language: de
 summary: "Autor*innen und Übersetzer*innen von LOW←TECH MAGAZINE"
 layout: contributors
 ---

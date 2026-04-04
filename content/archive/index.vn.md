@@ -1,7 +1,7 @@
 ---
 title: Archive
 slug: archives
-lang: vn
+language: vn
 summary: archive intro
 layout: archive
 ---

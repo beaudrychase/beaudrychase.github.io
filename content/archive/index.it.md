@@ -1,7 +1,7 @@
 ---
 title: Archivio
 slug: archives
-lang: it
+language: it
 layout: archive
 ---
 

@@ -1,6 +1,5 @@
 baseURL = "https://beaudrychase.github.io"
 title = "Dev Log by Beaudry Chase"
-author = "Beaudry Chase"
 copyright = "Beaudry Chase"
 languageCode = "en-us"
 buildFuture = true
@@ -40,12 +39,18 @@ enableInlineShortcodes = true
     style = 'onesenterprise'
     tabWidth = 4
 
+[params]
+  [params.author]
+    name = 'Beaudry Chase'
+    email = 'beaudry@beaudrychase.xyz'
+    bio = 'foo'
+  
+
 [permalinks]
   posts = '/:year/:month/:slugorcontentbasename/'
   categories = '/:slug/'
 
-[params]
-  author = 'Beaudry Chase'
+
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
 
@@ -68,7 +73,7 @@ enableInlineShortcodes = true
   tag = 'tags'
   category = 'categories'
   translator = 'translators'
-  lang = 'languages'
+  language = 'languages'
 [languages]
   [languages.en]
     languageName = 'English'
@@ -82,5 +87,5 @@ enableInlineShortcodes = true
     name = 'tags'
     weight = 100
   [[related.indices]]
-    name = 'lang'
+    name = 'language'
     weight = 80

@@ -1,6 +1,6 @@
 ---
 title: About
-lang: en
+language: en
 summary: a bit about me
 ---
 

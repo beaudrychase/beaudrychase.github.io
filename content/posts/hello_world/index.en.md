@@ -8,7 +8,7 @@ Tags: []
 Categories: ["blog"]
 DisableComments: false
 authors: ["Beaudry Chase"]
-lang: "en"
+language: "en"
 ---
 
 This is the first post on this site. It is hosted on

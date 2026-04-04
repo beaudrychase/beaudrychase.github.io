@@ -1,7 +1,7 @@
 ---
 title: Contributors
 slug: contributors
-lang: nl
+language: nl
 summary: "Authors and translators for LOW←TECH MAGAZINE"
 layout: contributors
 ---

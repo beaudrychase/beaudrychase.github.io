@@ -1,7 +1,7 @@
 ---
 title: Archive
 slug: archives
-lang: fr
+language: fr
 summary: archive intro
 layout: archive
 ---

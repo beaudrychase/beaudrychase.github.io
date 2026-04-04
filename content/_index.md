@@ -1,5 +1,5 @@
 ---
 cascade:
-  _build:
+  build:
     publishResources: false
 ---

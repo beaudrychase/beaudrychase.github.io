@@ -2,7 +2,7 @@
 title: "Niet gevonden"
 summary: "Deze pagina kon niet worden gevonden"
 noindex: true
-lang: nl
+language: nl
 url: "404"
 categories: [""]
 ---

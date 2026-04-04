@@ -1,7 +1,7 @@
 ---
 title: Archiwum
 slug: archives
-lang: pl
+language: pl
 summary: archive intro
 layout: archive
 ---

@@ -1,7 +1,7 @@
 ---
 title: Archief
 slug: archives
-lang: nl
+language: nl
 summary: archive intro
 layout: archive
 ---
