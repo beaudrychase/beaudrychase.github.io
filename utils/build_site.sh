@@ -5,7 +5,7 @@
 
 now=`date`
 baseURL="" #the URL of the website e.g. htttps://solar.lowtechmagazine.com/
-contentDir="" #the directory where your HUGO articles are e.g. /path/to/repo/solar_v2/content/
+contentDir="./content/" #the directory where your HUGO articles are e.g. /path/to/repo/solar_v2/content/
 repoDir="" #the full path to the repository
 outputDir="" # the directory where you export the site to.
 

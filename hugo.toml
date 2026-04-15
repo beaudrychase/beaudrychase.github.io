@@ -43,7 +43,7 @@ enableInlineShortcodes = true
   [params.author]
     name = 'Beaudry Chase'
     email = 'beaudry@beaudrychase.xyz'
-    bio = 'foo'
+    bio = 'SWE'
   
 
 [permalinks]

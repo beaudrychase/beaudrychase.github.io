@@ -77,11 +77,11 @@ def get_assets(soup):
     Lists all the page assets such as scripts and icons in a given HMTL page.
     """
     assets = []
-    for a in soup.findAll('link', {'rel':['apple-touch-icon','icon','stylesheet']}):
+    for a in soup.find_all('link', {'rel': ['apple-touch-icon', 'icon', 'stylesheet']}):
         a = a['href'].split('?')[0]
         if a not in assets:
             assets.append(a)
-    for s in soup.findAll("script"):
+    for s in soup.find_all("script"):
         if "src" in s.attrs:
             s = s["src"]
             if s not in assets:
@@ -100,7 +100,7 @@ def get_media(html_file):
     for img in soup(['img', 'object']):
         media.append(img['src'])
 
-    featured_images = soup.findAll('div', {'class':'featured-img'})
+    featured_images = soup.find_all('div', {'class': 'featured-img'})
     for fi in featured_images:
         fi = fi['style']
         start = fi.find("url('")
