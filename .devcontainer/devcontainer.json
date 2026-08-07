@@ -10,16 +10,19 @@
 		"git": "os-provided",
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
+	"forwardPorts": [1313],
 	"postStartCommand": "hugo server",
 	"customizations": {
 		"vscode": {
 			"settings": {
 				"editor.formatOnSave": true,
-				"prettier.proseWrap": "always"
+				"prettier.proseWrap": "always",
+				"black-formatter.args": ["--line-length", "44"]
 			},
 			"extensions": [
 				"yzhang.markdown-all-in-one",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"ms-python.black-formatter"
 			]
 		}
 	}

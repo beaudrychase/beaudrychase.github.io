@@ -24,10 +24,9 @@ blueish-white and then at sunset, it transitions to a dark red for the night.
 This lighting cycle follows research on the impact exposure to different colored
 light has on our ability to sleep at night. Exposure to blue and white light
 during the day helps you fall asleep at night, while exposure to them at night
-can make it hard to sleep ([source](https://pubmed.ncbi.nlm.nih.gov/25535358/)).
+can make it hard to sleep[^1].
 Red light, on the other hand, has little effect on our circadian rhythms, so
-exposure at night minimally impacts sleep
-([source](https://pubmed.ncbi.nlm.nih.gov/30311830/)). The light serves as an
+exposure at night minimally impacts sleep[^2]. The light serves as an
 open invitation to pause to take a breath and a reminder to tap into nature and
 follow our biological rythm and the Earth's solar cycle.
 
@@ -68,3 +67,6 @@ learn.
 
 I hope you have a better understanding of my light project. Check back in for
 future posts where I delve into the technical aspects of living_light!
+
+[^1]: https://pubmed.ncbi.nlm.nih.gov/25535358/
+[^2]: https://pubmed.ncbi.nlm.nih.gov/30311830/

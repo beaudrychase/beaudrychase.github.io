@@ -31,13 +31,13 @@ enableInlineShortcodes = true
     hl_Lines = ''
     hl_inline = false
     lineAnchors = ''
-    lineNoStart = 1
-    lineNos = false
+    lineNoStart = 0
+    lineNos = true
     lineNumbersInTable = true
-    noClasses = true
     noHl = false
-    style = 'onesenterprise'
     tabWidth = 4
+    wrapperClass = 'highlight'
+    noClasses = false
 
 [params]
   [params.author]
