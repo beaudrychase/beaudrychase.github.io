@@ -1,0 +1,91 @@
+baseURL = "https://beaudrychase.github.io"
+title = "Dev Log by Beaudry Chase"
+copyright = "Beaudry Chase"
+languageCode = "en-us"
+buildFuture = true
+buildDrafts = false
+pagination.pagerSize = 12
+
+DefaultContentLanguage = 'en'
+defaultContentLanguage = 'en'
+pluralizelisttitles = 'false'
+
+refLinksErrorLevel = 'WARNING'
+refLinksNotFoundURL = '/'
+
+timeout = 60000
+
+rssLimit = 3
+
+enableInlineShortcodes = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser.attribute]
+    block = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 0
+    lineNos = true
+    lineNumbersInTable = true
+    noHl = false
+    tabWidth = 4
+    wrapperClass = 'highlight'
+    noClasses = false
+
+[params]
+  [params.author]
+    name = 'Beaudry Chase'
+    email = 'beaudry@beaudrychase.xyz'
+    bio = 'SWE'
+  
+
+[permalinks]
+  posts = '/:year/:month/:slugorcontentbasename/'
+  categories = '/:slug/'
+
+
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+
+
+
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 1
+  [[menu.main]]
+    identifier = 'blog'
+    name = 'blog'
+    url = '/blog/'
+    weight = 2
+
+[taxonomies]
+  author = 'authors'
+  tag = 'tags'
+  category = 'categories'
+  translator = 'translators'
+  language = 'languages'
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  [[related.indices]]
+    name = 'language'
+    weight = 80

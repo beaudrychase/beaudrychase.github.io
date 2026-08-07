@@ -22,7 +22,8 @@ tsconfig.tsbuildinfo
 
 # Visual Studio Code configs
 .vscode/
-
+.venv/*
+resources/_gen/*
 # JetBrains IDEs
 .idea/
 
