@@ -7,7 +7,6 @@
 		"ghcr.io/devcontainers/features/hugo:1": {
 			"extended": true
 		},
-		"git": "os-provided",
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
 	"forwardPorts": [1313],
