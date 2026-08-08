@@ -2,7 +2,7 @@
 title: "High Level Service Class Design Strategy in python"
 date: 2026-08-06T15:15:38-05:00
 summary:
-  "A simple and effective pattern for service class design in python with a
+  "A simple and effective pattern for service class design in python with
   testing strategies"
 slug: "python-service-design-patterns"
 Tags: []
