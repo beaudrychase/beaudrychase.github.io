@@ -8,7 +8,7 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-	<link rel="icon" href="{{ .Site.BaseURL }}icons/sun.svg">
+	<link rel="icon" href="{{ .Site.BaseURL }}svg/logo.svg">
 
 	{{ $style := resources.Get "/css/style.scss" | css.Sass }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
