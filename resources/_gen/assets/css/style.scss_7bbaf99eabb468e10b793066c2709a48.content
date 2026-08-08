@@ -983,6 +983,7 @@ Then manually tweaked
   color: #2f1e2e;
   background-color: #e8ffd6;
   -webkit-text-size-adjust: none;
+  min-width: 33rem;
   --content-width: fit-content; }
 
 /* Error */

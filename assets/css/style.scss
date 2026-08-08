@@ -1330,7 +1330,8 @@ Then manually tweaked
     color: #2f1e2e;
     background-color: #e8ffd6;
     -webkit-text-size-adjust: none;
-    // --max-content-width: fit-content;
+    min-width: 33rem;
+        // --max-content-width: fit-content;./
     --content-width: fit-content;
 }
 

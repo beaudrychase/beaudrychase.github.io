@@ -5,6 +5,14 @@ from unittest.mock import Mock, call
 from pytest import fixture
 from pytest_mock import MockerFixture
 
+# class Service():
+
+#     def __init__(self, external_dependencies, ...):
+#         ...
+
+#     def public_interface(self, input, ...) -> Output:
+#         ...
+
 
 class Rejection:
     reason: str
@@ -19,6 +27,23 @@ class RejectionFetcher(ABC):
         question: str,
     ) -> Rejection:
         pass
+
+
+def get_response(
+    question: str,
+    rejection_fetcher: RejectionFetcher,
+    default_answer: str,
+) -> str:
+
+    rejection = (
+        rejection_fetcher.get_rejection(
+            question
+        )
+    )
+    if rejection.confidence < 0.5:
+        return default_answer
+
+    return rejection.reason
 
 
 class QuestionAnswerer:
