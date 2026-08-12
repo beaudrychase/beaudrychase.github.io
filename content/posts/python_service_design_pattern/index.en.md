@@ -8,6 +8,7 @@ slug: "python-service-design-patterns"
 Tags: []
 Categories: ["blog", "design", "programming"]
 DisableComments: false
+authors: ["Beaudry Chase"]
 Draft: false
 ---
 

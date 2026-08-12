@@ -8,6 +8,7 @@ Tags: []
 Categories: ["blog", "design", "programming"]
 DisableComments: false
 Draft: false
+authors: ["Beaudry Chase"]
 featured_image: "black_box_module.png"
 ---
 
