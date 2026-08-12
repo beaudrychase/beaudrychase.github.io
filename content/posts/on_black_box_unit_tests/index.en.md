@@ -7,7 +7,7 @@ slug: "on-black-box-unit-tests"
 Tags: []
 Categories: ["blog", "design", "programming"]
 DisableComments: false
-Draft: true
+Draft: false
 featured_image: "black_box_module.png"
 ---
 
