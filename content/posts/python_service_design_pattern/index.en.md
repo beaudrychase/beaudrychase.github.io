@@ -6,15 +6,15 @@ summary:
   testing strategies"
 slug: "python-service-design-patterns"
 Tags: []
-Categories: ["design", "programming"]
+Categories: ["blog", "design", "programming"]
 DisableComments: false
-Draft: false
+Draft: true
 ---
 
-This post describes very common design pattern I use when making
-classes in python. I will go over the high level design, a simple example, and
-how to write integration and unit tests against the pattern. The intended
-audience is familiar with python basics and `pytest`. There's certainly nothing
+This post describes very common design pattern I use when making classes in
+python. I will go over the high level design, a simple example, and how to write
+integration and unit tests against the pattern. The intended audience is
+familiar with python basics and `pytest`. There's certainly nothing
 groundbreaking about them, but these patterns are the foundation I build on when
 decomposing problems in python.
 
@@ -31,11 +31,11 @@ class Service():
 ```
 
 That's all there is to it. It is the basic form any object oriented class should
-follow. The constructor defines the relationship of an instance of the
-class to the outside world; it should take in any sort of configuration,
-external objects, or anything else required to set up the state of the object.
-The public functions should implement generic interface that is unlikely to
-change even if the internal implementation changes.
+follow. The constructor defines the relationship of an instance of the class to
+the outside world; it should take in any sort of configuration, external
+objects, or anything else required to set up the state of the object. The public
+functions should implement generic interface that is unlikely to change even if
+the internal implementation changes.
 
 A good rule of thumb when trying to determine if something should be passed into
 the constructor or a public method is that it should go in the constructor if
