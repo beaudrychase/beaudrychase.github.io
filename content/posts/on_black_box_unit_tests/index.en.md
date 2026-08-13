@@ -38,14 +38,14 @@ In practice, it is very hard to really do this. I think of true black box
 testing as a kind of Platonic ideal to strive for, but reality forces us to
 compromise. This is especially true with unit tests, where writing the tests
 often involves doing implementation specific setup to model a test case. Often
-the tests end up looking more gray than black.
+the tests end up looking more like gray boxes than black ones.
 
 The focus of this article is to provide strategies for navigating this grayness.
 There are tradeoffs between different approaches and the goal is to make the
 right ones so the tests still validate important behavior.
 
-{{% figure src="gradient.png" %}} Tests are often a shade of
-gray.{{% /figure %}}
+{{% figure src="gradient.png" %}} Gray box testing doesn't have the same ring to
+it.{{% /figure %}}
 
 ## Example Code
 
@@ -104,12 +104,16 @@ class QuestionAnswerer:
 
 ### Dependencies Preventing True Black Box Tests
 
-`QuestionAnswerer` is a pretty simple service. It exposes a method called
+`QuestionAnswerer` is a simple service. It exposes a method called
 `get_response` that under the hood forwards the `question` to a
 `RejectionFetcher` service. The `RejectionFetcher` is a dependency and poses a
 challenge for writing true black box unit tests. Whatever tests that are written
 against this class need to be aware of how it makes use of the
 `RejectionFetcher`, even though it is an internal implementation detail.
+
+The functioning of the public `get_response` interface is dependent on what
+`RejectionFetcher` returns. Users of the interface don't need to be aware of
+this, but the unit tests do.
 
 Here's what a simple unit test might look like[^1]:
 
@@ -148,15 +152,14 @@ def test_get_repsonse_high_confidence_fetched_result_returns_fetched(
 
 This test simply confirms that when the `RejectionFetcher` returns a result with
 high confidence the response returned from `get_response` is from that value
-instead of the default. This is not a true black box test because in order for
-it to work the test must be aware of how `RejectionFetcher` is used. In fact,
-most of the set up is just so `get_rejection` returns the right value for this
-test case.
+instead of the default. This is not a true black box test because it depends on
+the behavior of `RejectionFetcher`. In fact, most of the set up is just so
+`get_rejection` returns the right value for this test case.
 
 The strategy for managing this is to confirm that the class under test is using
 the dependency the correct way. This usually means that asserting that the
-interface was used correctly. In our case it means this test needs this
-additional assert:
+interface was used correctly. In our case, this test needs this additional
+assert:
 
 ```python {linenos=inline}
     assert (
@@ -178,7 +181,7 @@ style asserts.
 
 A common issue I see in unit tests is that the asserts aren't as strong as they
 should be. This often stems from asserting internal logic as a proxy for public
-logic. Here's an example:
+logic. Here's another test example:
 
 ```python {linenos=inline,hl_Lines=28}
 def test_get_response_low_confidence_fetched_result_returns_default(
@@ -211,21 +214,29 @@ def test_get_response_low_confidence_fetched_result_returns_default(
     assert result == question_answerer._default_answer
 ```
 
-Do the users of `QuestionAnswerer` care at all about the value of
-`_default_answer`? No, they don't, but the implementation of `QuestionAnswerer`
-stores the default value in that private attribute so this test is, on the
-surface, correct. This is a case where the test is relying on internal logic in
-the assert, when the test has all of the information to use a external value.
-This assert should be rewritten like this:
+While the first test validates the behavior of `QuestionAnswerer` when
+`RejectionFetcher` returns a high confidence response, this tests what happens
+when `QuestionAnswerer` receives a low confidence response. The behavior
+verified is that the default answer should be returned instead of the answer
+from `RejectionFetcher`.
+
+Look closely at the assert. Do the users of `QuestionAnswerer` care at all about
+the value of `_default_answer`? No, they don't, but the implementation of
+`QuestionAnswerer` stores the default value in that private attribute so this
+test is, on the surface, correct. What users of the interface is really care
+about is that the value they provided in the constructor for the default
+response, is the value that was returned. This is a case where the test is
+relying on internal logic in the assert, when the test has all of the
+information to use a external value. This assert should be rewritten like this:
 
 ```python {linenos=inline}
     assert result == default_rejection
 ```
 
-This assert is working purely at the level of validating inputs and outputs.
-However the class internally accounts for the default response no longer impacts
-the test. This test is less likely to spurriously break[^2] while having a
-stronger assert.
+This assert validates inputs and outputs instead of internal logic. However the
+class internally accounts for the default response no longer impacts the test.
+This test is less likely to spurriously break[^2] while having a stronger
+assert.
 
 I hope the distinction feels clear in this example. I find that this is the most
 common issue I see with unit tests. Things feel fuzzier after going through the
@@ -233,11 +244,12 @@ hassle of setting up Mocks and dealing with the complexity of real code.
 
 ## Conclusion
 
-True black box testing is the goal, but due to how code is structured tests need
-to deal with internal logic. I hope that these patterns are helpful when faced
-with these situations. Like I said above, in real code it can be hard at a
-glance to see how a unit test can be improved given how complex code is. I hope
-that having labels for these kinds of issues will make identifying them easier.
+True black box testing is the goal but due to how code is structured, writing
+tests without any awarenes of internal logic is often impossible. I hope that
+these patterns are helpful when faced with these situations. Like I said above,
+in real code it can be hard at a glance to see how a unit test can be improved
+given how complex code is. I hope that having labels for these kinds of issues
+will make identifying them easier.
 
 [^1]:
     Astute readers of my [previous

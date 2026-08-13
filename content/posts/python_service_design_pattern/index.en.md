@@ -12,8 +12,8 @@ authors: ["Beaudry Chase"]
 Draft: false
 ---
 
-This post describes very common design pattern I use when making classes in
-python. I will go over the high level design, a simple example, and how to write
+This post describes common design pattern I use when making classes in python. I
+will go over the high level design, a simple example, and how to write
 integration and unit tests against the pattern. The intended audience is
 familiar with python basics and `pytest`. There's certainly nothing
 groundbreaking about them, but these patterns are the foundation I build on when
@@ -147,7 +147,7 @@ get_response(
 )
 ```
 
-With this approach there is so more context that needs to be passed in every
+With this approach there is more context that needs to be passed in every
 time the function is called. The caller needs a reference to a
 `RejectionFetcher` and the default response. This pattern tends towards bloated
 function parameters with references passed into a function only to be passed
@@ -220,7 +220,7 @@ contructing an instance of the class. The `question_answerer` `fixture` is
 passed into the tests letting them reuse the same configuration.
 
 The result are tests that don't have a lot of setup, making it clear what set up
-is relevant for the specific case being tested.
+is relevant for the specific case being tested. This also reduces code duplication since the setup doesn't need to be defined in each test.
 
 ### Unit Tests
 
@@ -376,4 +376,6 @@ use from using it as a starting point when breaking down problems.
 
 [^1]:
     `RejectionFetcher` is also a service. I only included the abstract interface
-    because the implementation details don't matter for my example.
+    because the implementation details don't matter for my example. The example
+    is inspired by this project
+    [NaaS](https://github.com/hotheadhacker/no-as-a-service)
