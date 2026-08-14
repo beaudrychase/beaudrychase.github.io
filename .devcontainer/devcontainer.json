@@ -10,7 +10,7 @@
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
 	"forwardPorts": [1313],
-	"postStartCommand": "hugo server",
+	// "postStartCommand": "hugo server",
 	"customizations": {
 		"vscode": {
 			"settings": {

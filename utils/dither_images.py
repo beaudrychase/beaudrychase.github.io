@@ -1,5 +1,5 @@
 # image dithering script
-# © 2022 Roel Roscam Abbing, released as AGPLv3
+# Copyright 2022 Roel Roscam Abbing, released as AGPLv3
 # see https://www.gnu.org/licenses/agpl-3.0.html
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate.html 
 
@@ -60,7 +60,8 @@ def colorize(source_image, category):
             'low-tech': hitherdither.palette.Palette([(30,32,40), (11,21,71),(57,77,174),(158,168,218),(187,196,230),(243,244,250)]),
             'obsolete': hitherdither.palette.Palette([(9,74,58), (58,136,118),(101,163,148),(144,189,179),(169,204,195),(242,247,246)]),
             'high-tech': hitherdither.palette.Palette([(86,9,6), (197,49,45),(228,130,124),(233,155,151),(242,193,190),(252,241,240)]),
-            'grayscale': hitherdither.palette.Palette([(25,25,25), (75,75,75),(125,125,125),(175,175,175),(225,225,225),(250,250,250)])
+            'blog': hitherdither.palette.Palette([(12, 9, 31), (43, 33, 110), (98, 82, 203), (155, 145, 222), (212, 208, 241), (241, 239, 250)]),
+            'grayscale': hitherdither.palette.Palette([(25, 25, 25), (75, 75, 75), (125, 125, 125), (175, 175, 175), (225, 225, 225), (250, 250, 250)]),
         }
 
 
@@ -118,11 +119,12 @@ def delete_dithers(content_dir):
 
 def parse_front_matter(md):
     with open(md) as f:
+        logging.debug(f.name)
         contents = f.readlines()
         cat = None
         for l in contents:
-            if l.startswith("categories: "):
-                cat = l.split("categories: ")[1]
+            if l.startswith("Categories: "):
+                cat = l.split("Categories: ")[1]
                 cat = cat.strip("[")
                 cat = cat.strip()
                 cat = cat.strip("]")
